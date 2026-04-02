@@ -14,7 +14,7 @@ export default function LoginForm() {
 
     const data = await loginUser(email, password);
     const role = data?.user?.role;
-      console.log("User Role:", role); // Debugging line
+      console.log("User Role:", role); 
     if (role === "Member") {
       localStorage.setItem("user", JSON.stringify(data.user));
       router.push("/events");
